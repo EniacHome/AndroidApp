@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Eniac Home</string>
+    <string name="action_settings">Instellingen</string>
+    <string name="navigation_drawer_close">Sluit navigatie paneel</string>
+    <string name="navigation_drawer_open">Open navigatie paneel</string>
+    <string name="security">Beveiliging</string>
+    <string name="sensors">Sensoren</string>
+    <string name="settings">Instellingen</string>
+    <string name="temperature">Temperatuur</string>
+    <string name="information">Informatie</string>
+</resources>
