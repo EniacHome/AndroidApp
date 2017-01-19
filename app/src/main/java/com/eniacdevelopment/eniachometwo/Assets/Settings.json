@@ -1,0 +1,10 @@
+{
+  "Sensors":
+  {
+    "Temperature":
+            [
+              {"name": "LivingRoom", "location": "Living Room"},
+              {"name": "Kitchen", "location": "Kitchen"}
+            ]
+  }
+}

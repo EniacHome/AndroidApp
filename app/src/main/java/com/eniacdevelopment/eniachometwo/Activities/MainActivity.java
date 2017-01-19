@@ -1,6 +1,5 @@
-package com.eniacdevelopment.eniachometwo;
+package com.eniacdevelopment.eniachometwo.Activities;
 
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -12,9 +11,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.eniacdevelopment.eniachometwo.DrawerItemCustomAdapter;
 import com.eniacdevelopment.eniachometwo.Fragments.*;
-
-import java.util.List;
+import com.eniacdevelopment.eniachometwo.LayoutModels.DataModel;
+import com.eniacdevelopment.eniachometwo.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,12 +23,13 @@ public class MainActivity extends AppCompatActivity {
     private ListView mDrawerList;
     Toolbar toolbar;
     private CharSequence mDrawerTitle;
-    private Fragment fragment = null;
+    private IFragment fragment = null;
     private CharSequence mTitle;
     android.support.v7.app.ActionBarDrawerToggle mDrawerToggle;
     private final int Home = 0;
 
-    private Fragment[] ListOfFragments = {new HomeFragment(), new SensorsFragment(), new SecurityFragment(), new SettingsFragment(), new TemperatureFragment()};
+    private IFragment[] ListOfFragments = {new HomeFragment(), new SensorsFragment(), new SecurityFragment(), new SettingsFragment(),
+            new TemperatureFragment(), new InformationFragment(), new UserFragment()};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         drawerItem[2] = new DataModel(R.drawable.ic_locked, getString(R.string.security));
         drawerItem[3] = new DataModel(R.drawable.ic_settings, getString(R.string.settings));
         drawerItem[4] = new DataModel(R.drawable.ic_temperature, getString(R.string.temperature));
+        drawerItem[5] = new DataModel(R.drawable.ic_information_rotate, getString(R.string.information));
+        drawerItem[6] = new DataModel(R.drawable.ic_user, getString(R.string.user));
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -61,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         fragment = new HomeFragment();
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, fragment.getFragmentTag()).commit();
             mDrawerList.setItemChecked(Home, true);
             mDrawerList.setSelection(Home);
             setTitle(mNavigationDrawerItemTitles[Home]);
@@ -83,15 +86,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void selectItem(int position) {
-
-        fragment = null;
+    public void selectItem(int position) {
         fragment = ListOfFragments[position];
 
 
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, fragment.getFragmentTag()).addToBackStack(null).commit();
 
             mDrawerList.setItemChecked(position, true);
             mDrawerList.setSelection(position);
@@ -100,6 +101,24 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             Log.e("MainActivity", "Error in creating fragment");
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            if (fragment == getSupportFragmentManager().findFragmentByTag("FRAGMENT_HOME")){
+                finish();
+            } else {
+                super.onBackPressed();
+                IFragment prevFragment = (IFragment) getSupportFragmentManager().findFragmentById(R.id.content_frame);
+                mDrawerList.setItemChecked(prevFragment.getFragmentTitle(), true);
+                mDrawerList.setSelection(prevFragment.getFragmentTitle());
+                setTitle(mNavigationDrawerItemTitles[prevFragment.getFragmentTitle()]);
+            }
+
         }
     }
 
