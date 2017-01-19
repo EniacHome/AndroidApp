@@ -11,6 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:tint="#000000"
+        android:tintMode="multiply"
         android:paddingRight="10dp"
         android:paddingTop="4dp"/>
 

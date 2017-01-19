@@ -40,9 +40,7 @@ public class DrawerItemCustomAdapter extends ArrayAdapter<NavItemModel> {
         LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
         listItem = inflater.inflate(layoutResourceId, parent, false);
 
-
         ImageView imageViewIcon = (ImageView) listItem.findViewById(R.id.imageViewIcon);
-        imageViewIcon.setColorFilter(Color.parseColor("#000000"),PorterDuff.Mode.MULTIPLY);
         TextView textViewName = (TextView) listItem.findViewById(R.id.textViewName);
 
         NavItemModel folder = data[position];

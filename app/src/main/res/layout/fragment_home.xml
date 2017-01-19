@@ -34,6 +34,7 @@
         android:layout_weight="3">
 
         <FrameLayout
+            android:id="@+id/SensorsButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="3dp"
@@ -75,6 +76,7 @@
                </LinearLayout>
         </FrameLayout>
         <FrameLayout
+            android:id="@+id/TemperatureButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="3dp"
@@ -123,6 +125,7 @@
         android:layout_weight="3">
 
         <FrameLayout
+            android:id="@+id/SecurityButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="3dp"
@@ -140,13 +143,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/security"
                         android:gravity="center"
                         android:textSize="20dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:id="@+id/textView" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -164,6 +169,7 @@
             </LinearLayout>
         </FrameLayout>
         <FrameLayout
+            android:id="@+id/UserButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="3dp"
@@ -184,7 +190,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="User"
+                        android:text="@string/user"
                         android:gravity="center"
                         android:textSize="20dp"
                         android:textStyle="bold"/>
@@ -194,6 +200,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="3">
                     <ImageView
+                        android:id="@+id/test"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_user"/>
@@ -212,6 +219,7 @@
         android:layout_weight="3">
 
         <FrameLayout
+            android:id="@+id/InformationButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="3dp"
@@ -253,6 +261,7 @@
             </LinearLayout>
         </FrameLayout>
         <FrameLayout
+            android:id="@+id/SettingsButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="3dp"

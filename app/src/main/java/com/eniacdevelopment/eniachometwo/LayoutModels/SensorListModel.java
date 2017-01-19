@@ -12,10 +12,10 @@ import java.util.List;
 
 public class SensorListModel {
 
-    public SensorType sensorType;
-    public Sensor sensor;
+    public String sensorType;
+    public List<Sensor> sensors = new ArrayList<Sensor>();
 
-    public SensorListModel(SensorType sensorType) {
+    public SensorListModel(String sensorType) {
         this.sensorType = sensorType;
     }
 

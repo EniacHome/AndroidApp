@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="sensor_types">
+        <item>Temperatuur Sensor</item>
+        <item>Rook Sensor</item>
+        <item>Contact Sensor</item>
+        <item>Infrarood Sensor</item>
+    </string-array>
     <string name="app_name">Eniac Home</string>
     <string name="action_settings">Instellingen</string>
     <string name="navigation_drawer_close">Sluit navigatie paneel</string>
@@ -9,4 +15,40 @@
     <string name="settings">Instellingen</string>
     <string name="temperature">Temperatuur</string>
     <string name="information">Informatie</string>
+    <string name="home">Hoofdmenu</string>
+    <string name="user">Gebruiker</string>
+    <string name="action_sign_in">Log in of registreer</string>
+    <string name="action_sign_in_short">Log in</string>
+    <string name="alarm_level">Alarm niveau:</string>
+    <string name="app_theme">Applicatie thema:</string>
+    <string name="cancel">Annuleer</string>
+    <string name="communication_failed">Verbinding met de server is fout gegaan</string>
+    <string name="default_ip">127.0.0.1</string>
+    <string name="default_port">9090</string>
+    <string name="disabled">Uitgeschakeld</string>
+    <string name="edit_sensor">Verander de sensor informatie hier:</string>
+    <string name="edit_user">Verander de gebruiker informatie hier:</string>
+    <string name="enabled">Aan</string>
+    <string name="error_field_required">Dit veld is benodigd</string>
+    <string name="error_incorrect_password">Het wachtwoord is incorrect</string>
+    <string name="error_invalid_email">Het email adres is incorrect</string>
+    <string name="error_invalid_password">Het wachtwoord is te kort</string>
+    <string name="get_data">Verkrijg data van de server</string>
+    <string name="ip_address">Ip adres:</string>
+    <string name="port_number">Port nummer:</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Wachtwoord (Optioneel)</string>
+    <string name="save">Opslaan</string>
+    <string name="saved_changed">Veranderingen waren opgeslagen</string>
+    <string name="sensor_alarm_enabled">Alarm ingeschakeld:</string>
+    <string name="sensor_alarm_level">Alarm niveau:</string>
+    <string name="sensor_compare_level">Vergelijkings niveau:</string>
+    <string name="sensor_compare_method">Vergelijkings methode:</string>
+    <string name="sensor_name">Sensor naam:</string>
+    <string name="sensor_type">Sensor type:</string>
+    <string name="sensors_on_system">Alle sensoren op het systeem:</string>
+    <string name="title_activity_login">Inloggen</string>
+    <string name="users_on_system">Alle gebruikers op het systeem:</string>
+    <string name="users_registered">Geregistreerde gebruikers op het systeem:</string>
+    <string name="permission_rationale">TEMP</string>
 </resources>

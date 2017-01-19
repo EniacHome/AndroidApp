@@ -6,8 +6,8 @@
     android:layout_marginLeft="8dp"
     android:gravity="left"
     android:paddingLeft="32dp"
-    android:paddingTop="8dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
     android:text="Temp"
-    android:textSize="14sp"
-    android:textAlignment="textEnd"
+    android:textSize="20sp"
     android:textStyle="bold" />

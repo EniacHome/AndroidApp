@@ -38,6 +38,7 @@
         android:background="#FFFFFF"
         android:choiceMode="singleChoice"
         android:divider="@android:color/darker_gray"
+        android:headerDividersEnabled="true"
         android:dividerHeight="1dp" />
 
 </android.support.v4.widget.DrawerLayout>

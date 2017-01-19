@@ -42,7 +42,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Sensor Name:"
+                        android:text="@string/sensor_name"
                         android:textSize="17sp"
                         android:layout_marginTop="10dp"/>
                 </LinearLayout>
@@ -56,10 +56,8 @@
                         android:maxLines="1"
                         android:singleLine = "true"
                         android:paddingLeft="10dp"
-                        android:background="@drawable/gradient_spinner"/>
+                        android:background="@drawable/background_elements"/>
                 </LinearLayout>
-
-
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,7 +71,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Sensor Type:"
+                        android:text="@string/sensor_type"
                         android:textSize="17sp"
                         android:layout_marginTop="15dp"/>
                 </LinearLayout>
@@ -87,7 +85,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:entries="@array/sensor_types_usable"
-                        android:background="@drawable/gradient_spinner"
+                        android:background="@drawable/background_elements"
                         android:spinnerMode="dropdown" />
                 </LinearLayout>
 
@@ -113,14 +111,14 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:textSize="17sp"
-                            android:text="Alarm enabled:"
+                            android:text="@string/sensor_alarm_enabled"
                             android:gravity="center_vertical"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"
                             android:textSize="17sp"
-                            android:text="Alarm level:"
+                            android:text="@string/sensor_alarm_level"
                             android:gravity="center_vertical"/>
                     </LinearLayout>
                     <LinearLayout
@@ -144,29 +142,96 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="horizontal">
+
                             <EditText
                                 android:id="@+id/edit_sensor_alarm_level"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginLeft="50dp"
-                                android:layout_marginRight="50dp"
+                                android:layout_marginLeft="60dp"
+                                android:layout_marginRight="60dp"
                                 android:maxLines="1"
                                 android:singleLine = "true"
                                 android:layout_marginTop="5dp"
-                                android:layout_marginBottom="5dp"
                                 android:inputType="number"
                                 android:textAlignment="center"
-                                android:background="@drawable/gradient_spinner"/>
+                                android:background="@drawable/background_elements"/>
                         </FrameLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="6"
-                android:orientation="vertical">
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/sensor_compare_method"
+                        android:textSize="17sp"
+                        android:layout_marginTop="15dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+                    <Spinner
+                        android:id="@+id/edit_sensor_compare_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/sensor_compare_method_usable"
+                        android:background="@drawable/background_elements"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textSize="17sp"
+                        android:text="@string/sensor_compare_level"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edit_sensor_compare_level"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="60dp"
+                            android:maxLines="1"
+                            android:singleLine = "true"
+                            android:layout_marginTop="5dp"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            android:background="@drawable/background_elements"/>
+                    </FrameLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 

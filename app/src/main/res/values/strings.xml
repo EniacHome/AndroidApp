@@ -6,16 +6,92 @@
 
     <string name="action_settings">Settings</string>
 
+    <string-array name="sensor_types_usable">
+        <item>Temperature Sensor</item>
+        <item>Smoke Sensor</item>
+        <item>Contact Sensor</item>
+        <item>Infrared Sensor</item>
+    </string-array>
+    <string-array name="sensor_types">
+        <item>TemperatureSensor</item>
+        <item>SmokeSensor</item>
+        <item>ContactSensor</item>
+        <item>InfraredSensor</item>
+    </string-array>
+
+    <string-array name="user_roles_usable">
+        <item>User</item>
+        <item>Admin</item>
+    </string-array>
+
+    <string-array name="sensor_compare_method_usable">
+        <item>Equal</item>
+        <item>Greater</item>
+        <item>Smaller</item>
+        <item>Greater or equal</item>
+        <item>Smaller or equal</item>
+    </string-array>
+
+    <string-array name="sensor_compare_method">
+        <item>Equal</item>
+        <item>Greater</item>
+        <item>Smaller</item>
+        <item>GreaterOrEqual</item>
+        <item>SmallerOrEqual</item>
+    </string-array>
+
+    <string name="users_registered">Users registered on the system:</string>
     <string-array name="navigation_drawer_items_array">
-        <item>Home</item>
+        <item>@string/home</item>
         <item>@string/sensors</item>
         <item>@string/security</item>
         <item>@string/settings</item>
         <item>@string/temperature</item>
+        <item>@string/information</item>
+        <item>@string/user</item>
     </string-array>
+    <string name="home">Home</string>
     <string name="temperature">Temperature</string>
     <string name="security">Security</string>
     <string name="settings">Settings</string>
     <string name="sensors">Sensors</string>
     <string name="information">Information</string>
+    <string name="user">User</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="edit_sensor">Edit your Sensor information here:</string>
+    <string name="edit_user">Edit your user information here:</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="users_on_system">All users on the system:</string>
+    <string name="saved_changed">Changes were saved</string>
+    <string name="communication_failed">Communication with the server failed</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="sensors_on_system">All sensors on the system:</string>
+    <string name="ip_address">Ip address:</string>
+    <string name="app_theme">App theme:</string>
+    <string name="sensor_name">Sensor name:</string>
+    <string name="sensor_type">Sensor Type:</string>
+    <string name="sensor_alarm_enabled">Alarm enabled:</string>
+    <string name="sensor_alarm_level">Alarm level:</string>
+    <string name="port_number">Port number:</string>
+    <string name="sensor_compare_method">Compare method:</string>
+    <string name="sensor_compare_level">Compare level:</string>
+    <string name="default_ip">127.0.0.1</string>
+    <string name="default_port">9090</string>
+    <string name="alarm_level">Alarm level:</string>
+    <string name="get_data">Acquiring data from server</string>
 </resources>

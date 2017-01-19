@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#696969"/>
+    <size android:height="35sp"  />
+    <size android:width="50sp"  />
 
-</selector>
+    <!-- results in the track looking smaller than the thumb -->
+    <stroke
+        android:width="0dp"
+        android:color="#00ffffff"/>
+</shape>
